@@ -16,7 +16,7 @@ const Input:React.FC<InputProps> = ({
     label
 }) => {
 
-    return ( <div className="w-full">
+    return ( <div className="w-full ">
         <input
         disabled={disabled}
         onChange={onChange}
