@@ -1,14 +1,13 @@
 import { useCallback, useState } from "react";
 
 import useLoginModal from '@/hooks/useLoginModal'
+
 import Input from "../Input";
 import Modal from "../Modal";
 
 
 const LoginModal = () => {
 
-
-    
 
 const loginModal=useLoginModal();
   
@@ -47,6 +46,19 @@ const bodyContent= (
   </div>
 )
 
+const footerContent=(
+    <div className="text-neutral-400 text-center mt-4">
+        <p>First time using Twitter?
+          <span onClick={ ()=> {}}
+          className="hover:underline
+          cursor-pointer
+          text-white">
+          Create an account</span>
+        </p>
+    </div>
+)
+
+
 
 return ( 
 
@@ -57,6 +69,8 @@ return (
     actionLabel="Sign In"
     onClose={loginModal.onClose}
     onSubmit={onSubmit}
+    body={bodyContent}
+    footer={footerContent}
 />
  );
 }
