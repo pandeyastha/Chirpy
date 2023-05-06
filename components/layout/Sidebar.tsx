@@ -7,7 +7,12 @@ import SidebarLogo from "./SidebarLogo";
 import SidebarItem from "./SidebarItem";
 import SidebarTweetButton from './SidebarTweetButton';
 
+import useCurrentUser from '@/hooks/useCurrentUser';
+
 const Sidebar = () => {
+    const { data: currentUser } =useCurrentUser(); 
+
+
     const items= [
         {
             label:"Home",
@@ -42,7 +47,7 @@ const Sidebar = () => {
                     />
                     )
                 }
-                <SidebarItem  onClick= {()=>  signOut()} icon={BiLogOut} label="Logout"/>
+                {currentUser && (<SidebarItem  onClick= {()=>  signOut()} icon={BiLogOut} label="Logout"/>)}
                 <SidebarTweetButton/>
                 </div>
             </div>
