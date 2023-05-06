@@ -49,7 +49,7 @@ const ImageUpload: React.FC<DropzoneProps> = ({ onChange, label, value, disabled
           />
         </div>
       ) : (
-        <p className="text-white cursor-pointer ">{label}</p>
+        <p className="text-white">{label}</p>
       )}
     </div>
    );
