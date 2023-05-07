@@ -16,6 +16,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).end();
   }
 }
-
 {/**used as an API route in a Next.js application. 
 The route is designed to handle HTTP POST requests and create a new user  */}
