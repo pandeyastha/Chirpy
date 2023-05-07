@@ -40,7 +40,7 @@ const RegisterModal = () => {
         name,
       });
 
-      setIsLoading(false);
+      setIsLoading(false)
 
       toast.success('Account created.');
 
@@ -48,6 +48,7 @@ const RegisterModal = () => {
         email,
         password,
       });
+
       registerModal.onClose();
     } catch (error) {
       toast.error('Something went wrong');

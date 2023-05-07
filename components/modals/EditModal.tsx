@@ -50,20 +50,8 @@ const EditModal = () => {
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
-     <div className="cursor-pointer">
-       <ImageUpload
-       value={profileImage}
-        disabled={isLoading} 
-        onChange={(image) => setProfileImage(image)} 
-        label="Upload profile image" />
-      </div>
-      <div className="cursor-pointer">
-      <ImageUpload
-       value={coverImage} 
-       disabled={isLoading} 
-       onChange={(image) => setCoverImage(image)}
-        label="Upload cover image" />
-      </div>                                                                    {/**covered in extra div */}
+      <ImageUpload value={profileImage} disabled={isLoading} onChange={(image) => setProfileImage(image)} label="Upload profile image" />
+      <ImageUpload value={coverImage} disabled={isLoading} onChange={(image) => setCoverImage(image)} label="Upload cover image" />
       <Input
         placeholder="Name"
         onChange={(e) => setName(e.target.value)}
