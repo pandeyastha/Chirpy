@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
 
-import useUser from "@/hooks/useUser";
+import useUsers from "@/hooks/useUsers";
 
 interface AvatarProps {
   userId: string;
@@ -13,7 +13,7 @@ interface AvatarProps {
 const Avatar: React.FC<AvatarProps> = ({ userId, isLarge, hasBorder }) => {
   const router = useRouter();
 
-  const { data: fetchedUser } = useUser(userId);
+  const { data: fetchedUser } = useUsers();
 
   const onClick = useCallback((event: any) => {
     event.stopPropagation();
